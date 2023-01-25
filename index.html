@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="./alpine.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- X-Data menampung variable & function -->
+    <!-- X-Data menampung variable & function -->
+
+    <div x-data="users">
+        <h1 x-text="title"></h1>
+        <p x-text="nameProgram"></p>
+        <div></div>
+    </div>
+    
+    <div x-data="{ count: -5 }">
+        <button x-on:click="count += 10">-</button>
+        
+        <span x-text="count"></span>
+
+        <button x-on:click="count -= 5" x-bind:disabled="count == 0 ? true:false">+</button>
+
+        <button x-on:click="count = 0" x-bind:disabled="count <= 0 ? true:false" >reset</button>
+     
+    </div>
+
+    <div x-data="program">
+        <h1 x-text="title"></h1>
+    </div>
+
+    <!-- <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1> -->
+</body>
+</html>
